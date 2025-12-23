@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hossein — Premium Vector Portfolio</title>
+<title>Premium Vector Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet" />
 
@@ -16,7 +16,16 @@
   --accent:#6366f1;
   --radius:18px;
 }
-
+.project{
+  text-decoration:none;
+  color:inherit;
+}
+.project img{
+  transition:transform .4s ease;
+}
+.project:hover img{
+  transform:scale(1.05);
+}
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
@@ -184,11 +193,11 @@ footer{
   <h2>Selected Work</h2>
 
   <div class="portfolio">
-    <a href="animal-inker.html" class="project">
+    <a class="project" href="animal-inker.html">
       <img src="projects/animal-inker/cover.png" alt="Animal Inker">
       <div class="info">
         <h3>Animal Inker</h3>
-        <p>Premium Engraved Animal Vector Pack</p>
+        <p>Premium engraved animal vector pack for branding & apparel.</p>
       </div>
     </a>
   </div>
