@@ -110,11 +110,14 @@ h2{
 }
 
 .project{
-  background:var(--card);
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid #1a1c27;
-  transition:.3s;
+  text-decoration:none;
+  color:inherit;
+}
+.project img{
+  transition:transform .4s ease;
+}
+.project:hover img{
+  transform:scale(1.05);
 }
 
 .project:hover{
