@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Primal Inker — Premium Engraved Animal Vector Pack</title>
-  <meta name="description" content="Luxury engraved animal vector collection crafted for tattoo artists, apparel brands, and premium designers." />
+  <title>Primal Inker — Premium Engraved Animal Vector Packs</title>
+  <meta name="description" content="Luxury engraved animal vector packs crafted for tattoo artists, apparel brands, and premium designers." />
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="Primal Inker — Premium Engraved Animal Vector Pack" />
-  <meta property="og:description" content="Luxury engraved animal vector collection crafted for tattoo artists, apparel brands, and premium designers." />
+  <meta property="og:title" content="Primal Inker — Premium Engraved Animal Vector Packs" />
+  <meta property="og:description" content="Luxury engraved animal vector packs crafted for tattoo artists, apparel brands, and premium designers." />
+  <!-- ✅ بهتر: OG رو بذار روی فایل موجود -->
   <meta property="og:image" content="assets/images/animal-inker/og-primal-inker.jpg" />
   <meta property="og:type" content="website" />
 
@@ -96,7 +97,7 @@
       overflow:hidden;
     }
 
-    /* ✅ مهم: مسیر هیرو = همون فایل اولت */
+    /* ✅ Hero background stays LUXURY (golden lion) */
     .hero::before{
       content:"";
       position:absolute; inset:-2px;
@@ -104,8 +105,7 @@
         radial-gradient(800px 400px at 55% 35%, rgba(255,211,107,.20), transparent 60%),
         linear-gradient(180deg, rgba(5,5,8,.20), rgba(5,5,8,.82)),
         url("assets/images/animal-inker/GOLDEN%20CROWNED%20LION_FULL%20SIZE.PNG") center/cover no-repeat;
-
-transform: scale(1.04);
+      transform: scale(1.04);
       filter: saturate(1.06) contrast(1.06);
       opacity:.96;
     }
@@ -259,7 +259,7 @@ transform: scale(1.04);
       .grid-3{grid-template-columns:1fr; gap:12px}
     }
 
-.card{
+    .card{
       border-radius: var(--r);
       border:1px solid rgba(255,255,255,.10);
       background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.03));
@@ -278,6 +278,34 @@ transform: scale(1.04);
     .card .body{padding:14px 14px 16px}
     .card h3{margin:0 0 6px;font-size:16px;letter-spacing:.01em}
     .card p{margin:0;color: rgba(255,255,255,.72);line-height:1.6;font-size:13px}
+    .card .meta{
+      margin-top:10px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+      color: rgba(255,255,255,.65);
+      font-size:12px;
+      font-weight:800;
+    }
+    .pill{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      backdrop-filter: blur(10px);
+    }
+    .buy-row{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .buy-row a{
+      font-size:13px;
+      font-weight:950;
+    }
 
     /* Premium divider */
     .divider{
@@ -287,7 +315,7 @@ transform: scale(1.04);
       opacity:.9;
     }
 
-    /* Banner CTA (fix: not too dark + clearer image) */
+    /* Banner */
     .banner{
       position:relative;
       border-radius: 22px;
@@ -301,9 +329,9 @@ transform: scale(1.04);
       position:absolute; inset:0;
       background:
         linear-gradient(90deg, rgba(0,0,0,.52), rgba(0,0,0,.22) 55%, rgba(0,0,0,.48)),
-        url("assets/images/animal-inker/work-animalpack.png") center/cover no-repeat;
-      opacity:.92; /* روشن‌تر از قبل */
-      filter: saturate(1.06) contrast(1.08) brightness(1.05); /* ✅ مشکل تیرگی حل */
+        url("assets/images/animal-inker/work-animal-pack.png") center/cover no-repeat;
+      opacity:.92;
+      filter: saturate(1.06) contrast(1.08) brightness(1.05);
     }
     .banner::after{
       content:"";
@@ -331,7 +359,7 @@ transform: scale(1.04);
 
     /* Footer */
     footer{
-      padding:34px 0 44px;
+      padding:34px 0 30px;
       color: rgba(255,255,255,.55);
       border-top:1px solid rgba(255,255,255,.08);
       background: rgba(0,0,0,.18);
@@ -345,9 +373,38 @@ transform: scale(1.04);
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
       margin-bottom:14px;
     }
+
+    /* ✅ CF Proof footer styling */
+    .cf-proof{
+      padding:12px 0 18px;
+      border-top:1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.14);
+    }
+    .cf-proof .wrap{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      color: rgba(255,255,255,.55);
+      letter-spacing:.04em;
+    }
+    .cf-proof__label{
+      color: rgba(255,211,107,.75);
+      font-weight:900;
+      text-transform:uppercase;
+    }
+    .cf-proof__value{
+      font-weight:950;
+      color: rgba(255,255,255,.70);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      padding:6px 10px;
+      border-radius:999px;
+    }
   </style>
 </head>
-  
+
 <body>
   <div class="topbar">
     <div class="wrap topbar-inner">
@@ -363,7 +420,7 @@ transform: scale(1.04);
         <a href="#buy">Buy</a>
       </nav>
 
-      <a class="cta" href="#buy">Buy the Pack</a>
+      <a class="cta" href="#buy">Buy the Packs</a>
     </div>
   </div>
 
@@ -371,15 +428,15 @@ transform: scale(1.04);
   <header class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <div class="kicker">Golden Lion Engraving</div>
+        <div class="kicker">Luxury Engraving Aesthetic</div>
         <h1>PRIMAL INKER</h1>
         <p class="sub">
-          A luxury engraved animal vector collection crafted for tattoo artists, apparel brands and premium designers.
-          Clean paths, timeless engraving aesthetics — ready for commercial use.
+          Premium engraved animal vectors crafted for tattoo artists, apparel brands, and high-end designers.
+          Clean paths, timeless engraving vibe — ready for commercial use.
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#collection">View Collection</a>
+          <a class="btn primary" href="#collection">View Packs</a>
           <a class="btn" href="#inside">What’s inside</a>
         </div>
 
@@ -390,12 +447,11 @@ transform: scale(1.04);
         </p>
       </div>
 
-<!-- Right hero visual (foreground) -->
+      <!-- Right hero visual (foreground) -->
       <div class="hero-card" aria-label="Hero visual">
-        <!-- ✅ مهم: اینم همون فایل اول -->
         <img class="hero-art" src="assets/images/animal-inker/GOLDEN%20CROWNED%20LION_FULL%20SIZE.PNG" alt="Golden crowned lion (full size)" />
         <div class="hero-meta">
-          <span class="chip"><b>Formats:</b> SVG / EPS / AI</span>
+          <span class="chip"><b>Formats:</b> SVG / EPS / AI / PNG</span>
           <span class="chip"><b>Use:</b> Tattoo • Apparel • Brand</span>
           <span class="chip"><b>Style:</b> Engraved Luxury</span>
         </div>
@@ -408,38 +464,73 @@ transform: scale(1.04);
     <div class="wrap">
       <div class="split">
         <div>
-          <h2 class="section-title">Premium Engraved Collection</h2>
+          <h2 class="section-title">Featured Packs (Ready to Sell)</h2>
           <p class="section-sub">
-            A curated set of high-impact engraved vectors & mockups designed to sell: sharp silhouettes, clean detailing, premium presentation.
+            Three curated mini-bundles (3 designs each) with premium presentation — perfect for quick buyers and marketplace conversion.
           </p>
         </div>
         <div class="mini">assets/images/animal-inker/</div>
       </div>
 
       <div class="grid-3">
-        <article class="card">
-          <img class="img" src="assets/images/animal-inker/section-animal-bundle.jpg" alt="Animal bundle cover" />
+
+        <!-- ✅ Pack 1 -->
+        <article class="card" id="pack-night">
+          <img class="img" src="assets/images/animal-inker/cover_night_creatures.PNG" alt="Night Creatures cover" />
           <div class="body">
-            <h3>Golden Animal Pack</h3>
-            <p>High-detail engraved vectors with premium presentation.</p>
+            <h3>Night Creatures</h3>
+            <p>Dark, sharp, high-contrast engraved beasts — made to look expensive on tees and posters.</p>
+            <div class="meta">
+              <span class="pill">3 designs</span>
+              <span class="pill">SVG • EPS • AI • PNG</span>
+              <span class="pill">Commercial-ready</span>
+            </div>
+            <div class="buy-row">
+              <!-- TODO: لینک خرید رو جایگزین کن -->
+              <a class="btn primary" href="#" aria-label="Buy Night Creatures">Buy — $3.99</a>
+              <a class="btn" href="#inside">See previews</a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
-          <img class="img" src="assets/images/animal-inker/mockup-tshirt-lion.jpg" alt="T-shirt mockup lion" />
+        <!-- ✅ Pack 2 -->
+        <article class="card" id="pack-predators">
+          <img class="img" src="assets/images/animal-inker/cover_primal_predators.PNG" alt="Primal Predators cover" />
           <div class="body">
-            <h3>Apparel Mockups</h3>
-            <p>Ready for print & branding previews — saves time in sales pages.</p>
+            <h3>Primal Predators</h3>
+            <p>Predator-grade engraving with premium linework — perfect for streetwear, patches, emblems.</p>
+            <div class="meta">
+              <span class="pill">3 designs</span>
+              <span class="pill">SVG • EPS • AI • PNG</span>
+              <span class="pill">Clean vectors</span>
+            </div>
+            <div class="buy-row">
+              <!-- TODO: لینک خرید رو جایگزین کن -->
+              <a class="btn primary" href="#" aria-label="Buy Primal Predators">Buy — $3.99</a>
+              <a class="btn" href="#inside">See previews</a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
-          <img class="img" src="assets/images/animal-inker/mockup-tattoo-centaur.jpg" alt="Tattoo mockup centaur" />
+        <!-- ✅ Pack 3 -->
+        <article class="card" id="pack-sacred">
+          <img class="img" src="assets/images/animal-inker/cover_sacred_beasts.PNG" alt="Sacred Beasts cover" />
           <div class="body">
-            <h3>Tattoo Ready</h3>
-            <p>Optimized for ink & skin — bold readability at distance.</p>
+            <h3>Sacred Beasts</h3>
+            <p>Heraldic + ornate engraved animals with a premium “collector” vibe — ideal for prints and tattoo flash.</p>
+            <div class="meta">
+              <span class="pill">3 designs</span>
+              <span class="pill">SVG • EPS • AI • PNG</span>
+              <span class="pill">High detail</span>
+            </div>
+            <div class="buy-row">
+              <!-- TODO: لینک خرید رو جایگزین کن -->
+              <a class="btn primary" href="#" aria-label="Buy Sacred Beasts">Buy — $3.99</a>
+              <a class="btn" href="#inside">See previews</a>
+            </div>
           </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -447,33 +538,33 @@ transform: scale(1.04);
   <!-- INSIDE -->
   <section id="inside">
     <div class="wrap">
-      <h2 class="section-title">What’s Inside the Pack</h2>
+      <h2 class="section-title">What’s Inside (Proof + Use)</h2>
       <p class="section-sub">
-        Hero-grade visuals + real-world mockups + signature assets — designed to convert international buyers.
+        Keep the luxury look, but show buyers real use cases: shirt mockups, framed prints, tattoo-ready visuals.
       </p>
 
       <div class="grid-3">
         <article class="card">
           <img class="img" src="assets/images/animal-inker/hero-tiger.png" alt="Tiger vector" />
           <div class="body">
-            <h3>Engraved Tiger</h3>
-            <p>Bold contrast, sharp edges, clean silhouette — ideal for branding.</p>
+            <h3>Engraved Detail</h3>
+            <p>High-contrast linework that stays sharp in print and on fabric.</p>
           </div>
         </article>
 
         <article class="card">
-          <img class="img" src="assets/images/animal-inker/signature-lion.jpg" alt="Signature lion mock" />
+          <img class="img" src="assets/images/animal-inker/mockup-tshirt-lion.jpg" alt="T-shirt mockup" />
           <div class="body">
-            <h3>Signature Lion</h3>
-            <p>A premium “brand mark” look for logos, patches and emblems.</p>
+            <h3>Apparel Mockups</h3>
+            <p>Instant credibility for Creative Fabrica / Etsy listing images.</p>
           </div>
         </article>
 
         <article class="card">
-          <img class="img" src="assets/images/animal-inker/mockup-frame-lion.jpg" alt="Frame mockup lion" />
+          <img class="img" src="assets/images/animal-inker/mockup-frame-lion.jpg" alt="Frame mockup" />
           <div class="body">
-            <h3>Frame Mockup</h3>
-            <p>Instant portfolio shot — perfect for marketplaces & promos.</p>
+            <h3>Wall Art Preview</h3>
+            <p>Perfect for social posts + product page thumbnails.</p>
           </div>
         </article>
       </div>
@@ -485,20 +576,19 @@ transform: scale(1.04);
     <div class="wrap">
       <h2 class="section-title">Built for Professionals</h2>
       <p class="section-sub">
-        Delivered in high-resolution formats with clean paths and timeless engraving aesthetics — ready for commercial use.
+        Delivered in premium formats with clean paths and a timeless engraved aesthetic — ready for commercial use.
       </p>
 
       <div class="banner" id="buy">
         <div class="banner-inner">
           <div>
-            <h3>Own a Premium Animal Vector Bundle</h3>
-
-<p>
-              Get instant access to premium assets crafted for tattoo artists, apparel brands and designers.
-              Clean export, ready to sell.
+            <h3>Get Instant Access to All 3 Packs</h3>
+            <p>
+              Three mini-bundles designed to convert buyers fast. Add them to your store, listing, or portfolio today.
             </p>
           </div>
-          <a class="btn primary" href="#top">Get Instant Access</a>
+          <!-- TODO: لینک خرید پک کامل (bundle) -->
+          <a class="btn primary" href="#" aria-label="Buy all packs">Buy Bundle — $9.99</a>
         </div>
       </div>
     </div>
@@ -509,9 +599,12 @@ transform: scale(1.04);
       © 2025 Primal Inker — Premium Engraved Vector Art
     </div>
   </footer>
-<footer class="cf-proof" aria-label="Creative Fabrica ownership proof">
-  <span class="cf-proof__label">CF ID:</span>
-  <span class="cf-proof__value">18324765</span>
-</footer>
+
+  <footer class="cf-proof" aria-label="Creative Fabrica ownership proof">
+    <div class="wrap">
+      <span class="cf-proof__label">CF ID:</span>
+      <span class="cf-proof__value">18324765</span>
+    </div>
+  </footer>
 </body>
 </html>
